@@ -31,8 +31,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.ts',
+  output:{
+    library:'yktm',
+    libraryTarget:'umd',
+  },
   plugins: [new webpack.ProgressPlugin()],
 
   module: {
